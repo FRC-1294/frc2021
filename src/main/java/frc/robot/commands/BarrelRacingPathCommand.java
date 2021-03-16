@@ -7,16 +7,23 @@
 
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj2.command.CommandBase;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
+import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.commands.MoveByCommand;
 import frc.robot.commands.TurnByCommand;
 import frc.robot.subsystems.DriveAutoSubsystem;
+// NOTE:  Consider using this command inline, rather than writing a subclass.  For more
+// information, see:
+// https://docs.wpilib.org/en/latest/docs/software/commandbased/convenience-features.html
+public class BarrelRacingPathCommand extends SequentialCommandGroup 
+{
 
-public class BarrelRacingPath extends SequentialCommandGroup {
   DriveAutoSubsystem m_driveAuto;
+  /**
+   * Creates a new BarrelRacingPathCommand.
+   */
+  public BarrelRacingPathCommand(DriveAutoSubsystem driveAuto) {
 
-   public BarrelRacingPath(DriveAutoSubsystem driveAuto) {
     this.m_driveAuto = driveAuto;
 
     // Angle units = degrees
@@ -43,31 +50,10 @@ public class BarrelRacingPath extends SequentialCommandGroup {
     addCommands(new MoveByCommand(60,driveAuto,0));
     addCommands(new TurnByCommand(-90,driveAuto,0));
     addCommands(new MoveByCommand(50,driveAuto,0));
-
-    // Use addRequirements() here to declare subsystem dependencies.
-  }
-
-  // Called when the command is initially scheduled.
-  @Override
-  public void initialize() {
-
-    
   
+   
   }
 
-  // Called every time the scheduler runs while the command is scheduled.
-  @Override
-  public void execute() {
-  }
 
-  // Called once the command ends or is interrupted.
-  @Override
-  public void end(boolean interrupted) {
-  }
-
-  // Returns true when the command should end.
-  @Override
-  public boolean isFinished() {
-    return false;
-  }
+  
 }
