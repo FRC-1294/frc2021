@@ -26,9 +26,9 @@ public class BarrelRacingPath extends SequentialCommandGroup {
     addCommands(new TurnByCommand(-90,driveAuto,0));
     addCommands(new MoveByCommand(75,driveAuto,0));
     addCommands(new TurnByCommand(90,driveAuto,0));
-    addCommands(new MoveByCommand(160,driveAuto,0));
+    addCommands(new MoveByCommand(170,driveAuto,0));
     addCommands(new TurnByCommand(90,driveAuto,0));
-    addCommands(new MoveByCommand(70,driveAuto,0));
+    addCommands(new MoveByCommand(80,driveAuto,0));
     addCommands(new TurnByCommand(-90,driveAuto,0));
     addCommands(new MoveByCommand(75,driveAuto,0));
     addCommands(new TurnByCommand(-90,driveAuto,0));
