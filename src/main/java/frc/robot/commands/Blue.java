@@ -21,8 +21,7 @@ public class Blue extends SequentialCommandGroup {
     addCommands(new MoveByCommand(Math.sqrt(2) * 5 * 12, driveAuto, 0));
     addCommands(new TurnByCommand(45 * -1, driveAuto, 0));
     addCommands(new MoveByCommand(2 * 12, driveAuto, 0));
-
-    SmartDashboard.putData(new Blue(driveAuto));
+    
   }
 
   // Called when the command is initially scheduled.
