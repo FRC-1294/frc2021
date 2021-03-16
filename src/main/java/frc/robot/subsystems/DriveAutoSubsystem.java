@@ -5,6 +5,9 @@ import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.Timer;
 
+import frc.robot.commands.Red;
+import frc.robot.commands.Blue;
+
 import com.revrobotics.CANSparkMax; //Shacuando was here
 import com.revrobotics.ControlType;
 import com.revrobotics.CANSparkMax.IdleMode;
@@ -100,6 +103,10 @@ public class DriveAutoSubsystem extends SubsystemBase {
 
     timer.start();
     rumbleTime.start();
+
+
+    SmartDashboard.putData(new Red(driveAuto));
+    SmartDashboard.putData(new Blue(driveAuto));
   }
 
   @Override
