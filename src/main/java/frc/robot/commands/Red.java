@@ -1,3 +1,10 @@
+package frc.robot.commands;
+
+import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.subsystems.DriveAutoSubsystem;
+import frc.robot.commands.MoveByCommand;
+import frc.robot.commands.TurnByCommand;
+
 public class Red extends SequentialCommandGroup {
   DriveAutoSubsystem m_driveAuto;
 
