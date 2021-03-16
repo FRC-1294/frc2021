@@ -12,13 +12,15 @@ import com.revrobotics.CANPIDController;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import edu.wpi.first.wpilibj. XboxController;
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.Gains;
+import frc.robot.Robot;
+import frc.robot.commands.SalomPath;
 
 public class DriveAutoSubsystem extends SubsystemBase {
   private CANSparkMax frontLeftSpark = new CANSparkMax(Constants.frontLeftSpark, MotorType.kBrushless);
@@ -100,6 +102,7 @@ public class DriveAutoSubsystem extends SubsystemBase {
 
     timer.start();
     rumbleTime.start();
+    SmartDashboard.putData(new SalomPath(Robot.driveAuto));
   }
 
   @Override
