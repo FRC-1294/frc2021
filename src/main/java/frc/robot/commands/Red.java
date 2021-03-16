@@ -7,6 +7,7 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.DriveAutoSubsystem;
 import frc.robot.commands.MoveByCommand;
@@ -30,6 +31,8 @@ public class Red extends SequentialCommandGroup {
     addCommands(new MoveByCommand(Math.sqrt(62.5) * 12, driveAuto, 0));
     addCommands(new TurnByCommand(90 + Math.atan(2.5/7.5), driveAuto, 0));
     addCommands(new MoveByCommand(12.5 * 12, driveAuto, 0));
+
+    SmartDashboard.putData(new Red(driveAuto));
   }
 
   // Called when the command is initially scheduled.
