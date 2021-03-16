@@ -21,6 +21,8 @@ public class Red extends SequentialCommandGroup {
     addCommands(new MoveByCommand(3.5 * 12, driveAuto, 0));
     addCommands(new TurnByCommand(90, driveAuto, 0));
     addCommands(new MoveByCommand(10 * 12, driveAuto, 0));
+
+    SmartDashboard.putData(new Red(driveAuto));
   }
 
   // Called when the command is initially scheduled.
