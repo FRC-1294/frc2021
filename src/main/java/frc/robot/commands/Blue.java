@@ -14,13 +14,13 @@ public class Blue extends SequentialCommandGroup {
 
   /** Creates a new Blue. */
   public Blue(DriveAutoSubsystem driveAuto) {
-    addCommands(MoveByCommand(12.5 * 12, driveAuto, 0));
-    addCommands(TurnByCommand((Math.atan(7.5/2.5) - 45) * -1, driveAuto, 0));
-    addCommands(MoveByCommand(Math.sqrt(62.5) * 12, driveAuto, 0));
-    addCommands(TurnByCommand((180 - Math.atan(2.5/7.5)) * -1, driveAuto, 0));
-    addCommands(MoveByCommand(Math.sqrt(31.25) * 12, driveAuto, 0));
-    addCommands(TurnByCommand(Math.atan(2.5 / 5) * -1, driveAuto, 0));
-    addCommands(MoveByCommand(5 * 12, driveAuto, 0));
+    addCommands(new MoveByCommand(12.5 * 12, driveAuto, 0));
+    addCommands(new TurnByCommand((Math.atan(7.5/2.5) - 45) * -1, driveAuto, 0));
+    addCommands(new MoveByCommand(Math.sqrt(62.5) * 12, driveAuto, 0));
+    addCommands(new TurnByCommand((180 - Math.atan(2.5/7.5)) * -1, driveAuto, 0));
+    addCommands(new MoveByCommand(Math.sqrt(31.25) * 12, driveAuto, 0));
+    addCommands(new TurnByCommand(Math.atan(2.5 / 5) * -1, driveAuto, 0));
+    addCommands(new MoveByCommand(5 * 12, driveAuto, 0));
   }
 
   // Called when the command is initially scheduled.

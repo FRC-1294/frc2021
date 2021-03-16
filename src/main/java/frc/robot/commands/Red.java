@@ -22,14 +22,14 @@ public class Red extends SequentialCommandGroup {
     this.m_driveAuto = driveAuto;
 
     // amount (degrees or inches), driveAuto, pidType (0)
-    addCommands(TurnByCommand(45, driveAuto, 0));
-    addCommands(MoveByCommand(5 * Math.sqrt(2) * 12, driveAuto, 0));
-    addCommands(TurnByCommand((Math.atan(5/2.5) - 45) * -1, driveAuto, 0));
-    addCommands(MoveByCommand(Math.sqrt(31.25) * 12, driveAuto, 0));
-    addCommands(TurnByCommand((Math.atan(2.5/7.5) + Math.atan(7.5/2.5)) * -1, driveAuto, 0));
-    addCommands(MoveByCommand(Math.sqrt(62.5) * 12, driveAuto, 0));
-    addCommands(TurnByCommand(90 + Math.atan(2.5/7.5), driveAuto, 0));
-    addCommands(MoveByCommand(12.5 * 12, driveAuto, 0));
+    addCommands(new TurnByCommand(45, driveAuto, 0));
+    addCommands(new MoveByCommand(5 * Math.sqrt(2) * 12, driveAuto, 0));
+    addCommands(new TurnByCommand((Math.atan(5/2.5) - 45) * -1, driveAuto, 0));
+    addCommands(new MoveByCommand(Math.sqrt(31.25) * 12, driveAuto, 0));
+    addCommands(new TurnByCommand((Math.atan(2.5/7.5) + Math.atan(7.5/2.5)) * -1, driveAuto, 0));
+    addCommands(new MoveByCommand(Math.sqrt(62.5) * 12, driveAuto, 0));
+    addCommands(new TurnByCommand(90 + Math.atan(2.5/7.5), driveAuto, 0));
+    addCommands(new MoveByCommand(12.5 * 12, driveAuto, 0));
   }
 
   // Called when the command is initially scheduled.
