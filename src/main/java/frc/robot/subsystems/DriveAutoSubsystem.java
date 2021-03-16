@@ -100,6 +100,9 @@ public class DriveAutoSubsystem extends SubsystemBase {
 
     timer.start();
     rumbleTime.start();
+
+    SmartDashboard.putData(new Blue(driveAuto));
+    SmartDashboard.putData(new Red(driveAuto));
   }
 
   @Override
