@@ -17,8 +17,12 @@ import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 import frc.robot.Constants;
 import frc.robot.Gains;
+import frc.robot.Robot;
+import frc.robot.commands.Red;
+import frc.robot.commands.Blue;
 
 public class DriveAutoSubsystem extends SubsystemBase {
   private CANSparkMax frontLeftSpark = new CANSparkMax(Constants.frontLeftSpark, MotorType.kBrushless);
@@ -101,8 +105,8 @@ public class DriveAutoSubsystem extends SubsystemBase {
     timer.start();
     rumbleTime.start();
 
-    SmartDashboard.putData(new Blue(driveAuto));
-    SmartDashboard.putData(new Red(driveAuto));
+    SmartDashboard.putData(new Blue(Robot.driveAuto));
+    SmartDashboard.putData(new Red(Robot.driveAuto));
   }
 
   @Override

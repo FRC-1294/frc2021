@@ -7,6 +7,8 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
+
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.DriveAutoSubsystem;
@@ -18,6 +20,7 @@ import frc.robot.commands.TurnByCommand;
 
 public class Red extends SequentialCommandGroup {
   DriveAutoSubsystem m_driveAuto;
+  boolean isFinished;
 
   public Red(DriveAutoSubsystem driveAuto){
     this.m_driveAuto = driveAuto;
