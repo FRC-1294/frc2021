@@ -10,10 +10,11 @@ import frc.robot.commands.TurnByCommand;
 
 public class Red extends SequentialCommandGroup {
   DriveAutoSubsystem m_driveAuto;
-
+  boolean isFinished;
 
   public Red(DriveAutoSubsystem driveAuto){
     this.m_driveAuto = driveAuto;
+    boolean isFinished;
 
     // amount (degrees or inches), driveAuto, pidType (0)
     addCommands(new MoveByCommand(5 * 12, driveAuto, 0));

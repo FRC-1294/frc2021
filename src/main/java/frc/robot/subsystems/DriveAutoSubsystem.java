@@ -104,18 +104,15 @@ public class DriveAutoSubsystem extends SubsystemBase {
     timer.start();
     rumbleTime.start();
 
-
-    SmartDashboard.putData(new Red(driveAuto));
-    SmartDashboard.putData(new Blue(driveAuto));
+    SmartDashboard.putData(new Red(Robot.driveAuto));
+    SmartDashboard.putData(new Blue(Robot.driveAuto));
   }
 
   @Override
   public void periodic() {
     sparkDrive.feedWatchdog();
 
-    SmartDashboard.putString("AmountTraveled", getAmountTraveled(0) + " , " + getAmountTraveled(1));
-    SmartDashboard.putNumber("currentAngle", getCurrentAngle());
-    SmartDashboard.putNumber("encoder", getFrontLeftPosition());
+    SmartDashboard.putNumber("Poisition", getFrontLeftPosition());
 
     if (driveJoystick.getBumper(Hand.kRight)) {
       setMode("brake");
