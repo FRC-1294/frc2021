@@ -20,8 +20,8 @@ import edu.wpi.first.wpilibj2.command.Command;
  */
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
-  private final DriveAutoSubsystem m_driveAutoSubsystem = new DriveAutoSubsystem();
-
+  public final DriveAutoSubsystem m_driveAutoSubsystem = new DriveAutoSubsystem();
+  public static boolean continueLoopingLightSpeed = false;
   /**
    * The container for the robot.  Contains subsystems, OI devices, and commands.
    */
