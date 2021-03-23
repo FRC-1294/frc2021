@@ -30,7 +30,7 @@ public class Red extends SequentialCommandGroup {
     addCommands(new MoveByCommand(5 * Math.sqrt(2) * 12, driveAuto, 0));
     addCommands(new TurnByCommand((int) (Math.atan(5/2.5) - 45) * -1, driveAuto, 0));
     addCommands(new MoveByCommand(Math.sqrt(31.25) * 12, driveAuto, 0));
-    addCommands(new TurnByCommand((int) (Math.atan(2.5/7.5) + (int) ath.atan(7.5/2.5)) * -1, driveAuto, 0));
+    addCommands(new TurnByCommand((int) (Math.atan(2.5/7.5) + (int) Math.atan(7.5/2.5)) * -1, driveAuto, 0));
     addCommands(new MoveByCommand(Math.sqrt(62.5) * 12, driveAuto, 0));
     addCommands(new TurnByCommand(90 + (int) Math.atan(2.5/7.5), driveAuto, 0));
     addCommands(new MoveByCommand(12.5 * 12, driveAuto, 0));
