@@ -1,6 +1,7 @@
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
+
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.DriveAutoSubsystem;
@@ -9,6 +10,7 @@ import frc.robot.commands.TurnByCommand;
 
 public class Blue extends SequentialCommandGroup {
   DriveAutoSubsystem m_driveAuto;
+  boolean isFinished;
 
   public Blue(DriveAutoSubsystem driveAuto){
     this.m_driveAuto = driveAuto;
@@ -23,7 +25,6 @@ public class Blue extends SequentialCommandGroup {
     addCommands(new MoveByCommand(Math.sqrt(2) * 5 * 12, driveAuto, 0));
     addCommands(new TurnByCommand(45 * -1, driveAuto, 0));
     addCommands(new MoveByCommand(2 * 12, driveAuto, 0));
-    
   }
 
   // Called when the command is initially scheduled.
