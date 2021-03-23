@@ -116,8 +116,10 @@ public class DriveAutoSubsystem extends SubsystemBase {
   public void periodic() {
     sparkDrive.feedWatchdog();
 
-    SmartDashboard.putNumber("Poisition", getFrontLeftPosition());
-
+    SmartDashboard.putString("AmountTraveled", getAmountTraveled(0) + " , " + getAmountTraveled(1));
+    SmartDashboard.putNumber("currentAngle", getCurrentAngle());
+    SmartDashboard.putNumber("encoder", getFrontLeftPosition());
+    
     if (driveJoystick.getBumper(Hand.kRight)) {
       setMode("brake");
     }
