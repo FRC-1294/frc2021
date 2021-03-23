@@ -8,6 +8,7 @@ import frc.robot.commands.TurnByCommand;
 
 public class Red extends SequentialCommandGroup {
   DriveAutoSubsystem m_driveAuto;
+  
 
   public Red(DriveAutoSubsystem driveAuto){
     this.m_driveAuto = driveAuto;
